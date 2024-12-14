@@ -1,0 +1,17 @@
+@startuml nombre
+class SistemaParking {
+    +main(args: String[]): void
+    -registrarVehiculo(scanner: Scanner): void
+    -consultarVehiculos(): void
+}
+
+class Vehiculo {
+    -placa: String
+    -modelo: String
+    -propietario: String
+    +Vehiculo(placa: String, modelo: String, propietario: String)
+    +toString(): String
+}
+
+SistemaParking --> Vehiculo : "Lista de vehículos"
+@enduml
